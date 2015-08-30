@@ -1,0 +1,21 @@
+﻿Build started 2015/8/30 11:01:36.
+     1>Project "C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Character_7\Character_7.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Character_7.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Character_7.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Character_7.cpp person.cpp sales_data.cpp
+         sales_data.cpp
+         person.cpp
+         Character_7.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Debug\Character_7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Debug\Character_7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Debug\Character_7.lib" /MACHINE:X86 Debug\Character_7.obj
+         Debug\person.obj
+         Debug\sales_data.obj
+         Debug\stdafx.obj
+         Character_7.vcxproj -> C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Debug\Character_7.exe
+     1>Done Building Project "C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Character_7\Character_7.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.52
