@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "person.h"
 
-string Person::get_address() const {
+std::string Person::get_address() const {
 	return address;
 }
-string Person::get_name() const {
+std::string Person::get_name() const {
 	return name;
 }

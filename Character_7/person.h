@@ -1,13 +1,16 @@
 #include <string>
 
-using std::string;
-
 struct Person
 {
-	string name;
-	string address;
+	std::string name;
+	std::string address;
 
-	string get_name() const;
-	string get_address() const;
+	std::string get_name() const;
+	std::string get_address() const;
+
+	Person() = default;
+	Person(const std::string &name, const std::string &address) : name(name), address(address) {
+
+	}
 };
 #pragma once

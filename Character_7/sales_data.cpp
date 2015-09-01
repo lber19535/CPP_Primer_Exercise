@@ -2,12 +2,8 @@
 #include "sales_data.h"
 #include <iostream>
 
-using std::istream;
-using std::ostream;
-using std::endl;
-using std::cout;
-
-string Sales_data::isbn() const {
+// member function
+std::string Sales_data::isbn() const {
 	return this->bookNo;
 }
 

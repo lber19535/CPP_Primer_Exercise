@@ -24,6 +24,12 @@ Character_7.vcxproj.filters
 Character_7.cpp
     This is the main application source file.
 
+person.h and person.cpp
+	这部分是书中练习的内容，从开始构建一个 person 类然后逐渐扩展的过程。
+
+sales_data.h and sales_data.cpp
+	这部分是整合了这一章主要的示例代码。
+
 /////////////////////////////////////////////////////////////////////////////
 Other standard files:
 

@@ -6,18 +6,15 @@
 #include "person.h"
 #include "sales_data.h"
 
-using std::string;
-using std::initializer_list;
-using std::cout;
-using std::endl;
-using std::cin;
-
 int main()
 {
 	Sales_data d1;
-	read(cin, d1);
+	Sales_data d2(std::cin);
+	Sales_data d3("123456");
+	Sales_data d4("1234", 2, 3);
 
-	print(cout, d1) << endl;
+	Person p1;
+	Person p2("bill", "china");
 
 	getchar();
 
