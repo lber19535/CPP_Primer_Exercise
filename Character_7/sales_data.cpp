@@ -4,43 +4,33 @@
 
 // member function
 std::string Sales_data::isbn() const {
-	return this->bookNo;
-}
-
-double Sales_data::avg_price() const {
-	if (units_sold != 0)
-	{
-		return revenue / units_sold;
-	}
-	else {
-		return 0;
-	}
+    return this->bookNo;
 }
 
 Sales_data &Sales_data::combine(const Sales_data & r) {
-	this->units_sold += r.units_sold;
-	this->revenue += r.revenue;
-	return *this;
+    this->units_sold += r.units_sold;
+    this->revenue += r.revenue;
+    return *this;
 }
 
-istream &read(istream &in, Sales_data &data) {
+std::istream &read(std::istream &in, Sales_data &data) {
 
-	cout << "input isbn number: " << endl;
-	in >> data.bookNo;
-	cout << "input units sold: " << endl;
-	in >> data.units_sold;
-	cout << "next!" << endl;
-	return in;
+    std::cout << "input isbn number: " << std::endl;
+    in >> data.bookNo;
+    std::cout << "input units sold: " << std::endl;
+    in >> data.units_sold;
+    std::cout << "next!" << std::endl;
+    return in;
 }
 
-ostream &print(ostream &out, const Sales_data &data) {
-	out << "isbn number is " << data.bookNo << endl;
-	out << "units sold is " << data.units_sold << endl;
-	return out;
+std::ostream &print(std::ostream &out, const Sales_data &data) {
+    out << "isbn number is " << data.bookNo << std::endl;
+    out << "units sold is " << data.units_sold << std::endl;
+    return out;
 }
 
 Sales_data add(const Sales_data &a, const Sales_data &b) {
-	Sales_data sum = a;
-	sum.combine(b);
-	return sum;
+    Sales_data sum = a;
+    sum.combine(b);
+    return sum;
 }
