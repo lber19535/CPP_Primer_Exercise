@@ -29,6 +29,9 @@ int main()
     //s.display(std::cout);
     //std::cout << std::endl;
 
+    Window_mgr mgr;
+    mgr.clear(0);
+
     getchar();
 
     return 0;
