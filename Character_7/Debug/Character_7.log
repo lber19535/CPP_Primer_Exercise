@@ -1,5 +1,5 @@
-﻿Build started 2015/9/24 11:14:28.
-     1>Project "C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Character_7\Character_7.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 2015/9/27 17:42:55.
+     1>Project "C:\Users\lber1\Documents\Dev\GitProject\CPP_Primer_Exercise\Character_7\Character_7.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Character_7.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
@@ -9,17 +9,11 @@
          sales_data.cpp
          person.cpp
          Character_7.cpp
+     1>c:\users\lber1\documents\dev\gitproject\cpp_primer_exercise\character_7\character_7.cpp(85): error C2662: 'const bool &Debug::any(void)': cannot convert 'this' pointer from 'const Debug' to 'Debug &'
+         c:\users\lber1\documents\dev\gitproject\cpp_primer_exercise\character_7\character_7.cpp(85): note: Conversion loses qualifiers
          Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Debug\Character_7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Debug\Character_7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Debug\Character_7.lib" /MACHINE:X86 Debug\Character_7.obj
-         Debug\person.obj
-         Debug\sales_data.obj
-         Debug\screen.obj
-         Debug\stdafx.obj
-         Debug\window_mgr.obj
-         Character_7.vcxproj -> C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Debug\Character_7.exe
-     1>Done Building Project "C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Character_7\Character_7.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\lber1\Documents\Dev\GitProject\CPP_Primer_Exercise\Character_7\Character_7.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:02.67
+Time Elapsed 00:00:02.93

@@ -17,13 +17,18 @@ private:
 
 public:
     // constructor
-    Sales_data() = default;
-    Sales_data(const std::string &s) : bookNo(s) {}
+    //Sales_data() = default;
+    Sales_data() : Sales_data("", 0, 0) {};
+    //Sales_data(const std::string &s) : bookNo(s) {}
+    Sales_data(const std::string &s) : Sales_data(s, 0, 0) {};
+    //explicit Sales_data(const std::string &s) : Sales_data(s, 0, 0) {};
     Sales_data(const std::string &s, unsigned n, double p) : bookNo(s), units_sold(n), revenue(p * n) {}
-    Sales_data(std::istream &in) {
+    Sales_data(std::istream &in) : Sales_data() {
         read(in, *this);
     }
     Sales_data &combine(const Sales_data &);
+    //Sales_data &combine(Sales_data &);
+    //Sales_data &combine(Sales_data);
     inline double avg_price() const {
         if (units_sold != 0)
         {
