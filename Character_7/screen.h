@@ -19,6 +19,7 @@ public:
     Screen &set(char c);
     Screen &set(pos r, pos col, char c);
     Screen &move(pos r, pos c);
+    pos sss(char c);
 
     Screen &display(std::ostream &cout);
 
@@ -49,5 +50,9 @@ inline Screen &Screen::set(pos r, pos col, char c) {
 
 inline void Screen::do_display(std::ostream &out) {
     out << contents << std::endl;
+}
+
+Screen::pos Screen::sss(char c) {
+    return 1;
 }
 
