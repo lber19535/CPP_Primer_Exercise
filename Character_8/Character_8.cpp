@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include <Windows.h>
 
 // Á·Ï°8.1
@@ -52,6 +53,80 @@ std::istream &read(std::istream &in) {
     return in;
 }
 
+std::string get_project_root_path() {
+    WCHAR  file_name[1024];
+    GetModuleFileName(NULL, file_name, 1024);
+
+    std::string file_path;
+    for (size_t i = 0; i < 1024; i++)
+    {
+        if (file_name[i] == 0)
+            break;
+        file_path += file_name[i];
+    }
+    std::string::size_type pos = file_path.find_last_of("\\/");
+    pos = file_path.substr(0, pos).find_last_of("\\/");
+    std::string path = file_path.substr(0, pos);
+    std::cout << path << std::endl;
+    return path;
+}
+
+// ex 8.4
+void save_in_vec() {
+    std::string path = get_project_root_path() + "\\" + "Character_8" + "\\" + "example" + "\\" + "vpnup.bat";
+
+    std::ifstream ifs(path);
+    std::vector<std::string> strs;
+    std::string buf;
+    while (ifs.good())
+    {
+        std::getline(ifs, buf);
+        strs.push_back(buf);
+        std::cout << buf << std::ends;
+    }
+    std::cout << "vector size is " << strs.size() << std::endl;
+}
+
+// ex 8.5
+void save_word_in_vec() {
+    std::string path = get_project_root_path() + "\\" + "Character_8" + "\\" + "example" + "\\" + "vpnup.bat";
+
+    std::ifstream ifs(path);
+    std::vector<std::string> strs;
+    std::string buf;
+    while (ifs.good())
+    {
+        std::getline(ifs, buf);
+
+        std::size_t start_space = 0;
+        std::size_t len = 0;
+        for (std::string::size_type i = 0; i < buf.size(); i++)
+        {
+            if (buf[i] == ' ' && len == 0)
+            {
+                len = i - start_space;
+            }
+
+            if (i == buf.size() - 1) {
+                len = buf.size() - start_space;
+            }
+
+            if(len != 0)
+            {
+                std::string item = buf.substr(start_space, len);
+                strs.push_back(item);
+                start_space = start_space + len;
+                len = 0;
+            }
+           
+        }
+        
+        std::cout << buf << std::ends;
+    }
+    std::cout << "vector size is " << strs.size() << std::endl;
+}
+
+
 int main()
 {
 
@@ -62,29 +137,9 @@ int main()
 
     //read(std::cin);
 
-    std::fstream fstrm("C:\\Users\\bill_lv\\Desktop\\vpnup.bat", std::fstream::in,std::fstream::trunc);
+    save_word_in_vec();
+   
 
-    std::string txt;
-    std::string buf;
-    while (fstrm.good())
-    {
-        std::getline(fstrm, buf);
-        //fstrm >> buf;
-        txt += buf + "\r\n";
-    }
-    std::cout << "txt" << std::ends;
-    WCHAR  file_name[1024];
-    GetModuleFileName(NULL, file_name,1024);
-
-    std::string file_path;
-    for (size_t i = 0; i < 1024; i++)
-    {
-        if (file_name[i] == 0)
-            break;
-        file_path += file_name[i];
-    }
-    std::string::size_type pos = file_path.find_last_of("\\/");
-    std::cout << file_path.substr(0,pos) << std::endl;
      system("pause");
 
     return 0;
