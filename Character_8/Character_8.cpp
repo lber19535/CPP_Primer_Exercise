@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <Windows.h>
+#include "utils.h"
 
 // Á·Ï°8.1
 std::istream &read(std::istream &in) {
@@ -126,8 +127,48 @@ void save_word_in_vec() {
     std::cout << "vector size is " << strs.size() << std::endl;
 }
 
+struct PersonInfo
+{
+    std::string name;
+    std::vector<std::string> phones;
+};
 
-int main()
+// ex 8.13
+std::vector<PersonInfo> read_person_info(std::istream &in) {
+   
+
+    //std::istream ifstrm(path);
+    std::string line;
+    std::vector<PersonInfo> infos;
+    while (in.good())
+    {
+        std::getline(in, line);
+
+        std::vector<std::string> str_vec = split(line, ' ');
+
+        PersonInfo info;
+        info.name = str_vec[0];
+
+        
+        for (auto p = str_vec.begin() + 1; p != str_vec.end(); p++)
+        {
+            info.phones.push_back(*p);
+        }
+        infos.push_back(info);
+        std::cout << line << std::endl;
+    }
+
+    return infos;
+}
+
+// ex 8.13
+std::vector<PersonInfo> read_person_info_from_file() {
+    std::string path = get_project_root_path() + "\\" + "Character_8" + "\\" + "example" + "\\" + "person_info";
+    std::ifstream in(path);
+    return read_person_info(in);
+}
+
+int main(int count, char* args)
 {
 
     //int ival;
@@ -137,8 +178,9 @@ int main()
 
     //read(std::cin);
 
-    save_word_in_vec();
+    //save_word_in_vec();
    
+    auto vec = read_person_info();
 
      system("pause");
 
