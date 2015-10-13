@@ -146,6 +146,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Debug.h" />
     <ClInclude Include="person.h" />
     <ClInclude Include="sales_data.h" />
     <ClInclude Include="screen.h" />

@@ -7,11 +7,18 @@ std::string Sales_data::isbn() const {
     return this->bookNo;
 }
 
+//Sales_data &Sales_data::combine(const Sales_data & r) {
+//    this->units_sold += r.units_sold;
+//    this->revenue += r.revenue;
+//    return *this;
+//}
+
 Sales_data &Sales_data::combine(const Sales_data & r) {
     this->units_sold += r.units_sold;
     this->revenue += r.revenue;
     return *this;
 }
+
 
 std::istream &read(std::istream &in, Sales_data &data) {
 
