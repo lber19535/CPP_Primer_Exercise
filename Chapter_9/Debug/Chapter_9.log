@@ -1,0 +1,17 @@
+﻿Build started 2015/10/16 18:09:16.
+     1>Project "C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Chapter_9\Chapter_9.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Chapter_9.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Chapter_9.cpp
+         Chapter_9.cpp
+     1>c:\users\bill_lv\documents\visual studio 2015\projects\cpp_primer_exercise\chapter_9\chapter_9.cpp(36): error C2039: 'arra': is not a member of 'std'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\deque(16): note: see declaration of 'std'
+     1>c:\users\bill_lv\documents\visual studio 2015\projects\cpp_primer_exercise\chapter_9\chapter_9.cpp(36): error C2065: 'arra': undeclared identifier
+     1>c:\users\bill_lv\documents\visual studio 2015\projects\cpp_primer_exercise\chapter_9\chapter_9.cpp(36): error C2065: 'array': undeclared identifier
+     1>c:\users\bill_lv\documents\visual studio 2015\projects\cpp_primer_exercise\chapter_9\chapter_9.cpp(36): error C2275: 'std::string': illegal use of this type as an expression
+         c:\users\bill_lv\documents\visual studio 2015\projects\cpp_primer_exercise\chapter_9\chapter_9.cpp(36): note: see declaration of 'std::string'
+     1>c:\users\bill_lv\documents\visual studio 2015\projects\cpp_primer_exercise\chapter_9\chapter_9.cpp(36): error C2065: 'aaa': undeclared identifier
+     1>Done Building Project "C:\Users\bill_lv\documents\visual studio 2015\Projects\CPP_Primer_Exercise\Chapter_9\Chapter_9.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.69
