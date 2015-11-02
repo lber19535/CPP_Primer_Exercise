@@ -161,6 +161,37 @@ std::string rename(std::string name, const  std::string &pre, const std::string 
     return name;
 }
 
+void find_fitler(const std::string &s, const std::string &filter) {
+    std::size_t pos = 0;
+    while ((pos = s.find_first_of(filter, pos)) != std::string::npos)
+    {
+        std::cout << "value is " << s[pos];
+        std::cout << " position is " << pos << std::endl;
+        pos++;
+    }
+}
+
+// ex 9.47
+void find_number(const std::string &s) {
+    const std::string target = "1234567890";
+    find_fitler(s, target);
+}
+
+void find_word(const std::string &s) {
+    std::string target = "";
+    for (size_t i = 65; i <= 90; i++)
+    {
+        char c = i;
+        target.push_back(c);
+    }
+    for (size_t i = 97; i <= 122; i++)
+    {
+        char c = i;
+        target.push_back(c);
+    }
+    find_fitler(s, target);
+}
+
 
 int main()
 {
@@ -181,6 +212,9 @@ int main()
 
     //auto r = rename("Bill", "Mr.", "III");
     //std::cout << r << std::endl;
+
+    //find_number("ei12qey12q8qwoeh");
+    //find_word("ei12qey12q8qwoeh");
 
     getchar();
     return 0;
